@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* 
+ font-family: "Roboto", sans-serif;
+ font-family: "Poppins", sans-serif;
+*/
+
+:root {
+    --color1: #01092E;
+    --color2: white;
+    --color3: #94947E;
+    --fontFamily1: "Poppins", sans-serif;
+    --fontFamily2: "Roboto", sans-serif;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;/* margin top and bottom 0, right and left auto(this centralizes the container) */
+}
+
+.gridColumns2 {
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.gridColumns3 {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    /* align-items: center; */
+}
+
+.gridColumns4 {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    /* align-items: center; */
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sectionTitle {
+    color: var(--color2);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.sectionText {
+    color: var(--color2);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Header and Navbar starts */
+.header {
+    background-color: var(--color1);
+    color: var(--color2);
+    padding: 10px 0;
+    border-bottom: 1px rgba(211, 211, 211, 0.507);
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .navbar--left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar .navbar--left img {
+    width: 100px;
+    height: 60px;
+}
+
+.navbar--left .left_links--container {
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar--left .left_links--container i {
+    font-size: 10px;
+}
+
+.left_links--container--children {
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px 30px;
+    box-shadow: 1px 1px 1px 1px rgb(26, 31, 45);
+    display: none;
+    z-index: 1;
+}
+
+.left_links--container--children a {
+    text-decoration: none;
+    color: white;
+    transition: all 2s ease;
+}
+
+.left_links--container--children a:hover {
+    color: var(--color3);
+}
+
+.navbar--left .left_links--container:hover .left_links--container--children {
+    display: flex;
+}
+
+.navbar .navbar--right {
+    display: flex;
+    gap: 15px
+}
+
+.navbar--right a {
+    text-decoration: none;
+    color: var(--color2);
+    background-color: var(--color3);
+    width: 100px; /* width will work becos the links are no longer inline elements */
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 3px;
+    transition: all 2s ease;
+}
+
+.navbar .navbar--right a:hover {
+    color: var(--color1);
+}
+
+.hambuger {
+    font-size: 30px;
+    color: var(--color2);
+    display: none;
+}
+
+/* Header and Navbar ends */
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    /* common css */
+    .container {
+        width: 95%;
+    }
+
+    .gridColumns2 {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 60px;
+    }
+
+    /* Responsive Design for Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        position: relative;
+    }
+
+    .navbar .navbar--left {
+        flex-direction: column;
+    }
+
+    .left_links--container {
+        display: none;
+    }
+
+    .navbar .navbar--right {
+        flex-direction: column;
+        display: none;
+    }
+
+    .navbar .navbar--right a {
+        padding: 3px 0;
+    }
+
+    .hambuger {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .bi-caret-down-fill {
+        margin-top: 3px;
+        margin-left: 5px;
+    }
+
+    .navbar.active .left_links--container {
+        display: flex;
+    }
+
+    .navbar.active .navbar--right {
+        display: flex;
+    }
+}
+
+/* footer section starts */
+.footer-section {
+    padding: 80px 0;
+    background-color: var(--color1);
+    color: var(--color2);
+}
+
+.footer-section .left img {
+    width: 100px;
+    height: 100px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--color2);
+    font-size: 18px;
+    transition: all 2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color2);
+}
+/* footer section ends */
+
+/* responsive gridColum4 */
+@media (max-width: 1150px) {
+    .gridColumns4 {
+        grid-template-columns: repeat(2, 200px);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 468px) {
+    .gridColumns4 {
+        grid-template-columns: repeat(1, 200px);
+        justify-content: center;
+    }
+}
+
+/* responsive gridColum3 */
+@media (max-width: 1150px) {
+    .gridColumns3 {
+        grid-template-columns: repeat(1, 200px);
+        justify-content: center;
+    }
+}

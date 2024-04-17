@@ -1,0 +1,84 @@
+.registrationFormBody {
+    background: url("../images/neon-city.png") no-repeat center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registrationFormContainer {
+    background-color: var(--color2);
+    color: black;
+    width: 40%;
+    margin: 0 auto;
+    height: 95vh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: auto;
+    border-radius: 10px;
+
+    &::-webkit-scrollbar {
+        width: 4px; /* Width of the scrollber */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: white; /* color of the track */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: orangered; /* Color of the scrollber thumb */
+        border-radius: 20px; /* Roundness of the scrollber thumb */
+        /* border: 3px solid white; */ /* Creates padding eround the scrollber thumb */
+    }
+}
+
+.home-link img {
+    width: 70px;
+    height: 70px;
+}
+
+.registrationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.registrationForm input, .registrationForm select {
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgba(211, 211, 211, 0.843);
+}
+
+.registrationForm button {
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgba(211, 211, 211, 0.843);
+    background-color: orangered;
+    color: var(--color2);
+}
+
+.form_link {
+    text-decoration: none;
+    color: orangered;
+}
+
+.asteriks {
+    color: orangered;
+}
+
+@media (max-width: 1000px) {
+    .registrationFormContainer {
+        width: 70%;
+    }
+}
+
+@media (max-width: 500px) {
+    .registrationFormContainer {
+        width: 100%;
+        padding: 20px;
+    }
+}

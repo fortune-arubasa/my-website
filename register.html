@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my-website ! Register Page</title>
+    <!-- common styles -->
+    <link rel="stylesheet" href="./src/CSS/common-styles.css">
+    <!-- contact.css -->
+    <link rel="stylesheet" href="./src/CSS/register.css">
+    <!-- boostrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Icon -->
+    <link rel="icon" href="./src/images/bitcoin-logo4.svg">
+</head>
+<body class="registrationFormBody">
+    <div class="registrationFormContainer">
+        <a href="index.html" class="home-link">
+            <img src="./src/images/bitcoin-logo4.svg" alt="">
+        </a>
+        <h4>Create an account</h4>
+        <form action="" class="registrationForm">
+            <label for="fname">First Name <span class="asteriks">*</span></label>
+            <input type="text" name="fname" id="fname" placeholder="Enter First Name" required>
+
+            <label for="lname">Last Name <span class="asteriks">*</span></label>
+            <input type="text" name="lname" id="lname" placeholder="Enter Last Name" required>
+
+            <label for="email">Email <span class="asteriks">*</span></label>
+            <input type="email" name="email" id="email" placeholder="Enter Email" required>
+
+            <label for="country">Country <span class="asteriks">*</span></label>
+            <select name="country" id="country" required>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Togo">Togo</option>
+                <option value="Ghana">Ghana</option>
+            </select>
+
+            <label for="rcode">Referal Code <span class="asteriks">*</span></label>
+            <input type="text" name="rcode" id="rcode" placeholder="Enter Your Referal Code" required>
+
+            <label for="psw">Password <span class="asteriks">*</span></label>
+            <input type="password" name="psw" id="psw" placeholder="Enter Password" required>
+
+            <label for="confirm-psw">Password <span class="asteriks">*</span></label>
+            <input type="password" name="confirm-psw" id="confirm-psw" placeholder="Confirm Password" required>
+
+            <div>
+                <input type="checkbox" id="tos" name="tos" required>
+                <label for="tos">I agree with <span><a href="#" class="form_link">Privacy & Policy</a></span> and <span><a href="#" class="form_link">Terms & Condition</a></span></label>
+            </div>
+
+            <button>Register</button>
+            <p>Already have an account? <a href="#" class="form_link">Login</a></p>
+        </form>
+    </div>
+</body>
+</html>
